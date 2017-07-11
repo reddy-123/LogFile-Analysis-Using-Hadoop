@@ -1,0 +1,27 @@
+A = LOAD 'world_bank_data_catalog.txt' AS (DataCatalog_id:chararray,	
+Name:chararray,
+Acronym	Description:chararray,
+URL	:chararray,
+Type	:chararray,
+Language Supported	:chararray,
+Periodicity	:chararray,
+Economy Coverage	:chararray,
+Granularity	:chararray,
+List of Countries/Regions/Sub-National:chararray,
+Admins:chararray,
+Number of Economies:chararray,
+Data Notes:chararray,
+Topics	:chararray,
+Update Frequency:chararray,
+Update Schedule	Last Revision Date:chararray,
+Contact:chararray,
+Access Option	:chararray,
+Bulk API	:chararray,
+Attribution/citation	:chararray,
+SourceURL	:chararray,
+DetailPageURL	:chararray,
+Coverage	:chararray,
+APIAccessURL:chararray);
+B= FILTER A BY coverage MATCHES '1990 - 2011.*';
+DUMP B;
+
